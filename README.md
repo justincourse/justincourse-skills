@@ -1,10 +1,15 @@
 # justincourse-skills
 
-> **开发中，服务尚未上线。** 现在安装本仓库的插件或 skill 也连不上服务，这不是插件坏了；服务正式上线后会去掉这条标注。
+## 关于 JustinCourse
 
-JustinCourse 课程助手的公开仓库：让 AI 助手（Claude Code、Codex、Cursor、claude.ai 等）通过 MCP 读取你在 [justincourse.com](https://justincourse.com) 已有权限的课程内容。
+[**JustinCourse（justincourse.com）**](https://justincourse.com) 是 AI 开发与实践课：系统学 Web 全栈开发，跟上 AI 前沿，用 AI 做真实项目，从环境配置走到部署上线。课程视频与图文笔记持续更新，还有学习社群可以交流提问。
 
-*English summary: client config and a usage skill for the (not yet live) justincourse.com MCP server at `https://justincourse.com/api/mcp`. Read-only; signs in with your own justincourse.com account via OAuth.*
+- 课程目录：<https://justincourse.com/courses>
+- AI 助手接入说明：<https://justincourse.com/skills>
+
+本仓库是 JustinCourse 课程助手的公开仓库：让 AI 助手（Claude Code、Codex、Cursor、claude.ai 等）通过 MCP 读取你在 [justincourse.com](https://justincourse.com) 已有权限的课程内容。
+
+*English summary: client config and a usage skill for the justincourse.com MCP server at `https://justincourse.com/api/mcp`. Read-only; signs in with your own justincourse.com account via OAuth.*
 
 ## 这是什么
 
@@ -23,13 +28,13 @@ JustinCourse 课程助手的公开仓库：让 AI 助手（Claude Code、Codex�
 
 免费用户只能读到课程目录、免费预览课时和图文试读段；会员按自己有权限的课程读取全文与字幕。具体口径以 [justincourse.com/skills](https://justincourse.com/skills) 介绍页为准。
 
-## 内测说明
+## 说明
 
-目前是内测阶段，**不含在任何套餐里，也没有任何公开承诺**（包括功能范围、价格、上线时间）。内测期间介绍页 [justincourse.com/skills](https://justincourse.com/skills) 也还没有上线，上线前打不开属正常。
+AI 助手接入不计入任何套餐，能读到什么只取决于你在网站上已有的权限。功能范围与调用上限可能调整，以介绍页 [justincourse.com/skills](https://justincourse.com/skills) 为准。
 
 ## 接入方法
 
-核实日期 2026-11-08：下面各客户端的配置写法逐一对照了当时的官方文档（链接见每一节），并在本机用 `claude` 2.1.296、`codex` 0.166.0 的 `--help` 核对了命令行参数。客户端更新很快，如与你的版本不符，以官方文档为准。以下所有方式都需要服务上线后才能真正连上。
+核实日期 2026-11-08：下面各客户端的配置写法逐一对照了当时的官方文档（链接见每一节），并在本机用 `claude` 2.1.296、`codex` 0.166.0 的 `--help` 核对了命令行参数。客户端更新很快，如与你的版本不符，以官方文档为准。
 
 ### Claude Code
 
@@ -101,7 +106,7 @@ Cursor 对需要登录的远程服务使用授权码 + PKCE 的 OAuth 流程，�
 
 官方文档说明：自定义连接器在 Free、Pro、Max、Ultra、Team、Enterprise 套餐上均可添加（Free 限一个）；Team 只有 Owner 能在组织设置里添加，Enterprise 取决于角色；连接请求从 Anthropic 云端发出，所以服务必须能被公网访问。
 
-文档：<https://support.claude.com/en/articles/11175166-get-started-with-custom-connectors-using-remote-mcp>。未能核实：界面菜单名称随版本调整较多，以你当前看到的为准；本服务的 OAuth 在 claude.ai 上的实际表现要等服务上线后才能验证。
+文档：<https://support.claude.com/en/articles/11175166-get-started-with-custom-connectors-using-remote-mcp>。未能核实：界面菜单名称随版本调整较多，以你当前看到的为准；本服务尚未在 claude.ai 上做过实际连接测试。
 
 ### 只安装 skill（通用方式）
 
@@ -131,7 +136,7 @@ npx skills add justincourse/justincourse-skills
 
 ## 相关链接
 
-- 站内介绍页：<https://justincourse.com/skills>（**尚未上线**，上线前打不开属正常）
+- 站内介绍页：<https://justincourse.com/skills>
 - 网站：<https://justincourse.com>
 
 ## 许可证
