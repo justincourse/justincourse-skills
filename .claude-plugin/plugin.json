@@ -1,0 +1,14 @@
+{
+  "name": "justincourse",
+  "displayName": "JustinCourse 课程助手",
+  "version": "0.1.0",
+  "description": "在 AI 助手里读你在 justincourse.com 有权限的课程、搜索内容并提问（只读；开发中，服务尚未上线）。",
+  "author": {
+    "name": "JustinCourse",
+    "url": "https://justincourse.com"
+  },
+  "homepage": "https://github.com/justincourse/justincourse-skills",
+  "repository": "https://github.com/justincourse/justincourse-skills",
+  "license": "MIT",
+  "keywords": ["justincourse", "mcp", "courses", "skill"]
+}
